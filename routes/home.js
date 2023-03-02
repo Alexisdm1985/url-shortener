@@ -1,16 +1,27 @@
 const express = require('express');
 const router = express.Router();
+const { getUrls, addUrl, delUrl, getUrl, updateUrl, toShortUrl } = require('../controllers/homeController');
+const urlValidate = require('../middlewares/urlValidate');
 
 router.route('/')
-    .get((req, res) => {
-        // simulacion db
-        const url = [
-            {origin: "www.google.com/bluuweb1", shortURL: "rutacortaxd"},
-            {origin: "www.google.com/bluuweb2", shortURL: "rutacortaxd"},
-            {origin: "www.google.com/bluuweb3", shortURL: "rutacortaxd"},
-        ];
+    .get(getUrls)
+    .post(
+        urlValidate, //middleware
+        addUrl
+        );
 
-        res.render("home", {urls: url});
-    })
+router.route("/editar/:id")
+        .get(getUrl)
+        .post(
+            urlValidate,
+            updateUrl
+            );
 
+router.route("/eliminar/:id")
+    .get(
+        delUrl
+        ); 
+
+router.route("/goTo/:shortUrl")
+        .get(toShortUrl)
 module.exports = router;

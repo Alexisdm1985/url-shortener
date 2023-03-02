@@ -1,0 +1,12 @@
+{{#if url}}
+<form action="/editar/{{url._id}}" method="post" class="p-2">
+    <input type="text" value="{{url.origin}}" name="origin" class="form-control my-2">
+    <button type="submit" class="btn btn-warning w-100 mb-2">Editar Url</button>
+</form>
+
+{{else}}
+<form action="/" method="post" class="p-2">
+    <input type="text" placeholder="insert origin" name="origin" class="form-control my-2">
+    <button type="submit" class="btn btn-primary w-100 mb-2">Guardar</button>
+</form>
+{{/if}}

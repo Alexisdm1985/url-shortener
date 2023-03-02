@@ -1,5 +1,13 @@
-{{> Navbar}}
-<h1>From home hbs</h1>
-{{#each  urls}}
-    {{> Card item=this}}
-{{/each}}
+<div class="container">
+
+    {{> Navbar}}
+
+    <h1 class="p-2">Agregue sus URL</h1>
+
+    {{> Form}}
+
+
+    {{#each  urls}}
+        {{> Card item=this}}
+    {{/each}}
+</div>
