@@ -5,10 +5,11 @@
 2. [Features](#features)
     * [Future features](#future-features)
 3. [How to run](#how-to-run)
-    * [Install all the dependencies ](#install-all-the-dependencies)
+    * [Install dependencies and set .env](#Install-dependencies-and-set-.env)
     * [Dependencies](#dependencies)
     * [Dev dependencies](#dev-dependencies)
-4. [Credits](#credits)
+4. [Code](#code)
+5. [Credits](#credits)
 
 ***
 
@@ -34,11 +35,20 @@ url shortener excercise with and `express` server that can be store data on `Mon
 
 ## How to run
 
-### Install all the dependencies 
+### Install dependencies and set .env
 
-```
+```sh
 $ npm install
 ```
+
+Create and set the .env with the port and mongo_uri
+
+```sh
+MONGO_URI=
+PORT= 3000
+```
+
+Run the app with ```sh $ npm run dev```
 
 ### Dependencies
 
@@ -53,5 +63,6 @@ $ npm install
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ***
+
 ## Credits
 1.  [Bluuweb Channel](https://www.youtube.com/channel/UCH7IANkyEcsVW_y1IlpkamQ)
