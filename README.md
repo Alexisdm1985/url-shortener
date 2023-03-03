@@ -44,11 +44,11 @@ $ npm install
 Create and set the .env with the port and mongo_uri
 
 ```sh
-MONGO_URI=
-PORT= 3000
+MONGO_URI= //mondoDB link connection here
+PORT= // Choose any port, if you don't set this, it will be run at port 3001
 ```
 
-Run the app with ```sh $ npm run dev```
+Run the app with ```$ npm run dev```
 
 ### Dependencies
 
